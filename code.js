@@ -2,12 +2,17 @@
 const require = createRequire(import.meta.url);
 const fs = require('fs');
 const express = require('express');
+const http = require('http');
 const https = require('https');
 const sio = require('socket.io');
 const { createLogger, format, transports } = require('winston');
 var bodyParser = require('body-parser');
 const mysql = require('mysql');
 require('dotenv').config();
+
+// Determine if running locally (without Cloudflare) or in production
+let IS_LOCAL = process.env.NODE_ENV === 'local' || process.env.USE_HTTP === 'true' || !process.env.KEY_CLOUDFLARE;
+
 var medsSQL_connection = mysql.createConnection({
     host: 'localhost',
     port: process.env.MYSQL_PORT,
@@ -20,13 +25,6 @@ import path from 'path';
 import { fileURLToPath } from 'url';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
-
-const ssgServerOptions = {
-    key: fs.readFileSync(process.env.KEY_CLOUDFLARE),
-    cert: fs.readFileSync(process.env.CERT_SSG),
-    requestCert: false,
-    rejectUnauthorized: false
-};
 
 // JSON read/write
 function JSONread(path) {
@@ -48,6 +46,29 @@ function JSONwrite(path, towrite) {
 };
 
 // setup logger
+const loggerTransports = [
+    new transports.Console({})
+];
+
+// Add file transports only if log paths are configured
+if (process.env.LOG_CODE_ERROR) {
+    // Ensure log directory exists
+    const logDir = path.dirname(process.env.LOG_CODE_ERROR);
+    if (!fs.existsSync(logDir)) {
+        fs.mkdirSync(logDir, { recursive: true });
+    }
+    loggerTransports.push(new transports.File({ filename: process.env.LOG_CODE_ERROR, level: 'error' }));
+}
+
+if (process.env.LOG_CODE_ALL) {
+    // Ensure log directory exists
+    const logDir = path.dirname(process.env.LOG_CODE_ALL);
+    if (!fs.existsSync(logDir)) {
+        fs.mkdirSync(logDir, { recursive: true });
+    }
+    loggerTransports.push(new transports.File({ filename: process.env.LOG_CODE_ALL }));
+}
+
 const logger_code = createLogger({
     level: 'info',
     format: format.combine(
@@ -60,15 +81,11 @@ const logger_code = createLogger({
         })
     ),
     defaultMeta: { service: 'code' },
-    transports: [
-        new transports.File({ filename: process.env.LOG_CODE_ERROR, level: 'error' }),
-        new transports.File({ filename: process.env.LOG_CODE_ALL }),
-        new transports.Console({})
-    ]
+    transports: loggerTransports
 });
 
 // request handling
-const port_code = process.env.SITE_CODE_PORT;
+const port_code = process.env.SITE_CODE_PORT || 3000;
 const site_code = express();
 
 site_code.use(express.static(__dirname + '/public'));
@@ -132,41 +149,111 @@ site_code.get('/index', (req, res) => {
     res.sendFile(__dirname + '/public/index.html');
 });
 
-const httpsServer_code = https.createServer(ssgServerOptions, site_code);
-const io_code = new sio.Server(httpsServer_code, {});
-
-try {
-    medsSQL_connection.connect(function (err) {
-        if (err) throw err;
-        // update_yarrlist();
-    });
-} catch (err) {
-    logger_code.error('requests connect error!', err);
-    socket.emit('nearest exit', "Oopsie, database error! Please try again, and let me know if you see this often.");
-};
-
-io_code.on('connection', (socket) => {
-    logger_code.info(socket.request.headers['cf-connecting-ip'] + ' has loaded meds!code!');
-    /*socket.on('server status', async (game) => {
-        game = game.toLowerCase();
-        if (data_code_serverz.hasOwnProperty(game)) {
-            var servstat = await serverStatus(game);
-            if (servstat) {
-                logger_code.info(socket.request.headers['cf-connecting-ip'] + ' checked ' + game + ' server: ONLINE');
-                socket.emit('server status', game, data_code_serverz[game].playerCount);
-            } else {
-                logger_code.info(socket.request.headers['cf-connecting-ip'] + ' checked ' + game + ' server: OFFLINE');
-                socket.emit('server status', game, 7777);
-            };
+// SSL options only needed for HTTPS/production
+let ssgServerOptions = null;
+if (!IS_LOCAL) {
+    try {
+        ssgServerOptions = {
+            key: fs.readFileSync(process.env.KEY_CLOUDFLARE),
+            cert: fs.readFileSync(process.env.CERT_SSG),
+            requestCert: false,
+            rejectUnauthorized: false
         };
+    } catch (err) {
+        logger_code.error('Failed to load SSL certificates, falling back to HTTP mode');
+        IS_LOCAL = true;
+    }
+}
+
+// Check if running on Vercel (serverless) or locally
+const isVercel = process.env.VERCEL === '1' || process.env.VERCEL_ENV;
+
+// Create HTTP or HTTPS server based on environment (only if not on Vercel)
+let server_code;
+let io_code = null;
+
+if (!isVercel) {
+    if (IS_LOCAL) {
+        server_code = http.createServer(site_code);
+        logger_code.info('Running in LOCAL mode (HTTP)');
+    } else {
+        server_code = https.createServer(ssgServerOptions, site_code);
+        logger_code.info('Running in PRODUCTION mode (HTTPS)');
+    }
+    // Socket.io only works with persistent connections (not on Vercel)
+    io_code = new sio.Server(server_code, {});
+} else {
+    logger_code.info('Running on Vercel - Socket.io disabled (WebSockets not supported)');
+}
+
+// Attempt database connection (non-blocking for local development)
+if (process.env.MYSQL_PORT && process.env.MYSQL_SITE_USERNAME) {
+    try {
+        medsSQL_connection.connect(function (err) {
+            if (err) {
+                logger_code.warn('Database connection error (server will continue without database):', err.message);
+            } else {
+                logger_code.info('Database connected successfully');
+                // update_yarrlist();
+            }
+        });
+    } catch (err) {
+        logger_code.warn('Database connection setup error (server will continue without database):', err.message);
+    }
+} else {
+    logger_code.info('Database credentials not configured - running without database');
+}
+
+// Helper function to get client IP address
+function getClientIP(socket) {
+    // Try Cloudflare header first (production)
+    if (socket.request.headers['cf-connecting-ip']) {
+        return socket.request.headers['cf-connecting-ip'];
+    }
+    // Try x-forwarded-for header (common proxy header)
+    if (socket.request.headers['x-forwarded-for']) {
+        return socket.request.headers['x-forwarded-for'].split(',')[0].trim();
+    }
+    // Fall back to socket IP address
+    return socket.request.connection?.remoteAddress || socket.handshake?.address || 'unknown';
+}
+
+// Socket.io connection handler (only if not on Vercel)
+if (io_code) {
+    io_code.on('connection', (socket) => {
+        const clientIP = getClientIP(socket);
+        logger_code.info(clientIP + ' has loaded meds!code!');
+        /*socket.on('server status', async (game) => {
+            game = game.toLowerCase();
+            if (data_code_serverz.hasOwnProperty(game)) {
+                var servstat = await serverStatus(game);
+                if (servstat) {
+                    logger_code.info(getClientIP(socket) + ' checked ' + game + ' server: ONLINE');
+                    socket.emit('server status', game, data_code_serverz[game].playerCount);
+                } else {
+                    logger_code.info(getClientIP(socket) + ' checked ' + game + ' server: OFFLINE');
+                    socket.emit('server status', game, 7777);
+                };
+            };
+        });
+        socket.on('request catalogue', async () => {
+            if (yarrlist_lastupdate < ((new Date().getTime()) - 30000)) { await update_yarrlist() };
+            socket.emit('request catalogue', yarrlist);
+        }); */
     });
-    socket.on('request catalogue', async () => {
-        if (yarrlist_lastupdate < ((new Date().getTime()) - 30000)) { await update_yarrlist() };
-        socket.emit('request catalogue', yarrlist);
-    }); */
-});
+}
 
 
-httpsServer_code.listen(port_code, () => {
-    logger_code.info(`meds!code running on port ${port_code}`);
-});
+// Export Express app for Vercel (always export, Vercel will use it if needed)
+// Note: Socket.io won't work on Vercel as it requires WebSocket support
+export default site_code;
+
+// Only start the server if running locally (not on Vercel)
+if (!isVercel && server_code) {
+    server_code.listen(port_code, () => {
+        const protocol = IS_LOCAL ? 'http' : 'https';
+        logger_code.info(`meds!code running on ${protocol}://localhost:${port_code}`);
+    });
+} else if (isVercel) {
+    logger_code.info('Running on Vercel (serverless mode) - server not started');
+}

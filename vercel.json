@@ -1,0 +1,60 @@
+{
+    "rewrites": [
+        {
+            "source": "/AtO",
+            "destination": "/AtO.html"
+        },
+        {
+            "source": "/AtO_How_To",
+            "destination": "/AtO_How_To.html"
+        },
+        {
+            "source": "/AtO_HowTo",
+            "destination": "/AtO_How_To.html"
+        },
+        {
+            "source": "/AtO_Rambling",
+            "destination": "/AtO_Rambling.html"
+        },
+        {
+            "source": "/AtO_Custom",
+            "destination": "/AtO_Custom.html"
+        },
+        {
+            "source": "/AtOCustom",
+            "destination": "/AtO_Custom.html"
+        },
+        {
+            "source": "/AtOCustomNode",
+            "destination": "/AtO_Custom_Node.html"
+        },
+        {
+            "source": "/AtO_Custom_Node",
+            "destination": "/AtO_Custom_Node.html"
+        },
+        {
+            "source": "/AtO_Seeds",
+            "destination": "/AtO_Seeds.html"
+        },
+        {
+            "source": "/AtOSeeds",
+            "destination": "/AtO_Seeds.html"
+        },
+        {
+            "source": "/AtO_Seeds_beta",
+            "destination": "/AtO_Seeds_beta.html"
+        },
+        {
+            "source": "/AtO_Profile",
+            "destination": "/AtO_Profile.html"
+        },
+        {
+            "source": "/AtOProfile",
+            "destination": "/AtO_Profile.html"
+        },
+        {
+            "source": "/index",
+            "destination": "/index.html"
+        }
+    ]
+}

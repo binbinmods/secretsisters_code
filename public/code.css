@@ -30,12 +30,19 @@ body {
 }
 
 @font-face {
-    font-family: AlbertTextBold;
-    src: url(/AlbertTextBold.otf);
+    font-family: "AlbertTextBold";
+    src: url(/AlbertTextBold.otf) format('opentype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
 }
+
 @font-face {
-    font-family: CantoraOne;
-    src: url(/CantoraOne-Regular.ttf);
+    font-family: "CantoraOne";
+    src: url(/CantoraOne-Regular.ttf) format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
 }
 
 .ato-title {
@@ -72,7 +79,8 @@ body {
     color: var(--meds-darkest-bg) !important;
 }
 
-#btn_menu_show:not(:hover):not(.active), #btn_menu_list:not(:hover):not(.active) {
+#btn_menu_show:not(:hover):not(.active),
+#btn_menu_list:not(:hover):not(.active) {
     background-color: var(--bs-dark);
 }
 
@@ -90,7 +98,7 @@ body {
     --bs-btn-active-border-color: var(--meds-card-upgrade-no);
     --bs-btn-disabled-color: var(--meds-card-upgrade-no);
     --bs-btn-disabled-border-color: var(--meds-card-upgrade-no);
-    --bs-btn-focus-shadow-rgb: 255,255,255;
+    --bs-btn-focus-shadow-rgb: 255, 255, 255;
     --bs-btn-hover-color: var(--bs-dark);
     --bs-btn-active-color: var(--bs-dark);
     --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
@@ -107,7 +115,7 @@ body {
     --bs-btn-active-border-color: var(--meds-card-upgrade-a);
     --bs-btn-disabled-color: var(--meds-card-upgrade-a);
     --bs-btn-disabled-border-color: var(--meds-card-upgrade-a);
-    --bs-btn-focus-shadow-rgb: 100,194,247;
+    --bs-btn-focus-shadow-rgb: 100, 194, 247;
     --bs-btn-hover-color: var(--bs-dark);
     --bs-btn-active-color: var(--bs-dark);
     --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
@@ -124,7 +132,7 @@ body {
     --bs-btn-active-border-color: var(--meds-card-upgrade-b);
     --bs-btn-disabled-color: var(--meds-card-upgrade-b);
     --bs-btn-disabled-border-color: var(--meds-card-upgrade-b);
-    --bs-btn-focus-shadow-rgb: 255,213,80;
+    --bs-btn-focus-shadow-rgb: 255, 213, 80;
     --bs-btn-hover-color: var(--bs-dark);
     --bs-btn-active-color: var(--bs-dark);
     --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
@@ -141,7 +149,7 @@ body {
     --bs-btn-active-border-color: var(--meds-card-upgrade-rare);
     --bs-btn-disabled-color: var(--meds-card-upgrade-rare);
     --bs-btn-disabled-border-color: var(--meds-card-upgrade-rare);
-    --bs-btn-focus-shadow-rgb: 227,128,255;
+    --bs-btn-focus-shadow-rgb: 227, 128, 255;
     --bs-btn-hover-color: #000;
     --bs-btn-active-color: #000;
     --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
@@ -149,19 +157,23 @@ body {
     --bs-gradient: none;
 }
 
-.meds-text-upgrade-no, .btn-outline-card-no {
+.meds-text-upgrade-no,
+.btn-outline-card-no {
     color: var(--meds-card-upgrade-no);
 }
 
-.meds-text-upgrade-a, .btn-outline-card-a {
+.meds-text-upgrade-a,
+.btn-outline-card-a {
     color: var(--meds-card-upgrade-a);
 }
 
-.meds-text-upgrade-b, .btn-outline-card-b {
+.meds-text-upgrade-b,
+.btn-outline-card-b {
     color: var(--meds-card-upgrade-b);
 }
 
-.meds-text-upgrade-rare, .btn-outline-card-rare {
+.meds-text-upgrade-rare,
+.btn-outline-card-rare {
     color: var(--meds-card-upgrade-rare);
 }
 
@@ -174,8 +186,11 @@ body {
     --bs-popover-body-padding-y: 0.5rem;
 }
 
-.meds-text-upgrade-no, .meds-text-upgrade-a, .meds-text-upgrade-b, .meds-text-upgrade-rare {
-    font-family: AlbertTextBold;
+.meds-text-upgrade-no,
+.meds-text-upgrade-a,
+.meds-text-upgrade-b,
+.meds-text-upgrade-rare {
+    font-family: "AlbertTextBold";
     font-size: 5rem;
     letter-spacing: -0.3rem;
     font-weight: 700;
@@ -183,21 +198,31 @@ body {
     -webkit-text-stroke-width: 0.15rem;
 }
 
-.btn-outline-card-no, .btn-outline-card-a, .btn-outline-card-b, .btn-outline-card-rare {
+.btn-outline-card-no,
+.btn-outline-card-a,
+.btn-outline-card-b,
+.btn-outline-card-rare {
     font-weight: 700;
     font-size: 2rem;
     margin-bottom: 0 !important;
-    font-family: AlbertTextBold;
+    font-family: "AlbertTextBold";
     letter-spacing: -1.5px;
     /*maybe line height 1.2?*/
     text-shadow: 0 0 2px var(--meds-card-name-outline), 0 0 2px var(--meds-card-name-outline), 0 0 2px var(--meds-card-name-outline), 0 0 2px var(--meds-card-name-outline);
 }
 
-.btn-outline-card-no.active, .btn-outline-card-a.active, .btn-outline-card-b.active, .btn-outline-card-rare.active {
+.btn-outline-card-no.active,
+.btn-outline-card-a.active,
+.btn-outline-card-b.active,
+.btn-outline-card-rare.active {
     color: var(--bs-black);
     text-shadow: none;
 }
-.btn-outline-card-no:hover, .btn-outline-card-a:hover, .btn-outline-card-b:hover, .btn-outline-card-rare:hover {
+
+.btn-outline-card-no:hover,
+.btn-outline-card-a:hover,
+.btn-outline-card-b:hover,
+.btn-outline-card-rare:hover {
     color: var(--bs-black);
 }
 
@@ -228,7 +253,7 @@ body {
 }
 
 .meds-text-bg-epic {
-    background-color: rgb(80%, 0%, 100%); 
+    background-color: rgb(80%, 0%, 100%);
     color: var(--bs-light);
 }
 
@@ -239,21 +264,21 @@ body {
 .svg-text-target {
     font-size: 2.4rem;
     font-weight: 600;
-    font-family: CantoraOne;
+    font-family: "CantoraOne";
     fill: rgb(21.5%, 9%, 0%);
 }
 
 .svg-text-type {
     font-size: 2.6rem;
     font-weight: 600;
-    font-family: CantoraOne;
+    font-family: "CantoraOne";
     fill: rgb(21.5%, 9%, 0%);
 }
 
 .svg-text-energy {
     fill: #eee;
     font-weight: 700;
-    font-family: CantoraOne;
+    font-family: "CantoraOne";
     font-size: 5.3rem;
     stroke: #111;
     stroke-width: 0px;
@@ -263,12 +288,12 @@ body {
 .svg-text-description {
     color: #222;
     font-weight: 500;
-    font-family: CantoraOne;
+    font-family: "CantoraOne";
     font-size: 3rem;
 }
 
 .meds-card-upgrade {
-    font-family: AlbertTextBold;
+    font-family: "AlbertTextBold";
     font-size: 5rem;
     letter-spacing: -3px;
     font-weight: 700;
@@ -301,26 +326,32 @@ body {
     background-color: var(--meds-senenthia);
     color: var(--bs-light);
 }
+
 .meds-text-bg-aquarfall {
     background-color: var(--meds-aquarfall);
     color: var(--bs-light);
 }
+
 .meds-text-bg-velkarath {
     background-color: var(--meds-velkarath);
     color: var(--bs-light);
 }
+
 .meds-text-bg-faeborg {
     background-color: var(--meds-faeborg);
     color: var(--bs-light);
 }
+
 .meds-text-bg-ulminin {
     background-color: var(--meds-ulminin);
     color: var(--bs-light);
 }
+
 .meds-text-bg-voidlow {
     background-color: var(--meds-voidlow);
     color: var(--bs-light);
 }
+
 .meds-text-bg-voidhigh {
     background-color: var(--meds-voidhigh);
     color: var(--bs-light);
@@ -361,6 +392,7 @@ body {
     right: 12px;
     z-index: 99;
 }
+
 /*
     .fixed-top-end.nohover {
     position: relative;
@@ -385,12 +417,15 @@ body {
     .meds-xxl-20 {
         width: 20% !important;
     }
+
     .meds-xxl-40 {
         width: 40% !important;
     }
+
     .meds-xxl-60 {
         width: 60% !important;
     }
+
     .meds-xxl-auto {
         width: auto !important;
     }
@@ -401,11 +436,13 @@ body {
         position: absolute;
     }
 }
+
 @media (min-width: 1960px) {
     .fixed-top-spacer {
         position: relative;
     }
 }
+
 @media (max-width: 2319px) {
     .mx-auto-from-2320 {
         margin-right: auto !important;
@@ -413,7 +450,7 @@ body {
     }
 }
 
-@media (min-width: 2320px)  {
+@media (min-width: 2320px) {
     .mx-auto-from-2320 {
         margin-right: auto !important;
         margin-left: auto !important;
@@ -461,7 +498,10 @@ body {
     border: none !important;
 }*/
 
-.input-group, .form-control, .form-select, .input-group-text {
+.input-group,
+.form-control,
+.form-select,
+.input-group-text {
     border-color: var(--meds-current-dark-bg);
 }
 
@@ -477,24 +517,29 @@ body {
     --meds-current-dark-bg: var(--bs-accordion-btn-bg);
 }
 
-.accordion-body .input-group > span.input-group-text:not(.custom) {
+.accordion-body .input-group>span.input-group-text:not(.custom) {
     background-color: var(--meds-darkest-bg) !important;
     color: var(--bs-light) !important;
     font-weight: 700;
 }
 
-.accordion-body .input-group > .form-floating > input, .accordion-body .input-group > .form-floating > select, .accordion-body .input-group > div.input-group-text {
+.accordion-body .input-group>.form-floating>input,
+.accordion-body .input-group>.form-floating>select,
+.accordion-body .input-group>div.input-group-text {
     background-color: var(--meds-darker-bg);
     color: var(--bs-light);
 }
 
-.meds-input-groups .input-group .input-group-text, .meds-input-groups .input-group .form-control, .meds-input-groups .input-group .form-select, input[type="file"] {
+.meds-input-groups .input-group .input-group-text,
+.meds-input-groups .input-group .form-control,
+.meds-input-groups .input-group .form-select,
+input[type="file"] {
     color: var(--bs-light) !important;
     background-color: var(--bs-dark) !important;
     border-color: var(--meds-darkest-bg) !important;
 }
 
-.accordion:not(.accordion-single) > .accordion-item:not(:last-child) > .accordion-collapse  {
+.accordion:not(.accordion-single)>.accordion-item:not(:last-child)>.accordion-collapse {
     border-bottom-style: none !important;
 }
 
@@ -508,36 +553,42 @@ body {
     --bs-accordion-active-bg: var(--meds-senenthia) !important;
     --meds-current-dark-bg: var(--meds-senenthia) !important;
 }
+
 .meds-accordionbg-aquarfall {
     --bs-accordion-btn-bg: var(--meds-aquarfall) !important;
     --bs-accordion-border-color: var(--meds-aquarfall) !important;
     --bs-accordion-active-bg: var(--meds-aquarfall) !important;
     --meds-current-dark-bg: var(--meds-aquarfall) !important;
 }
+
 .meds-accordionbg-velkarath {
     --bs-accordion-btn-bg: var(--meds-velkarath) !important;
     --bs-accordion-border-color: var(--meds-velkarath) !important;
     --bs-accordion-active-bg: var(--meds-velkarath) !important;
     --meds-current-dark-bg: var(--meds-velkarath) !important;
 }
+
 .meds-accordionbg-faeborg {
     --bs-accordion-btn-bg: var(--meds-faeborg) !important;
     --bs-accordion-border-color: var(--meds-faeborg) !important;
     --bs-accordion-active-bg: var(--meds-faeborg) !important;
     --meds-current-dark-bg: var(--meds-faeborg) !important;
 }
+
 .meds-accordionbg-ulminin {
     --bs-accordion-btn-bg: var(--meds-ulminin) !important;
     --bs-accordion-border-color: var(--meds-ulminin) !important;
     --bs-accordion-active-bg: var(--meds-ulminin) !important;
     --meds-current-dark-bg: var(--meds-ulminin) !important;
 }
+
 .meds-accordionbg-voidlow {
     --bs-accordion-btn-bg: var(--meds-voidlow) !important;
     --bs-accordion-border-color: var(--meds-voidlow) !important;
     --bs-accordion-active-bg: var(--meds-voidlow) !important;
     --meds-current-dark-bg: var(--meds-voidlow) !important;
 }
+
 .meds-accordionbg-voidhigh {
     --bs-accordion-btn-bg: var(--meds-voidhigh) !important;
     --bs-accordion-border-color: var(--meds-voidhigh) !important;
@@ -551,7 +602,9 @@ body {
     transition: color 0.15s ease-in-out,background-color 0.15s ease-in-out,border-color 0.15s ease-in-out,box-shadow 0.15s ease-in-out,border-radius 0.15s ease, height .35s ease, border-bottom-left-radius .35s ease, border-bottom-right-radius .35s ease !important;*/
 }
 
-.accordion-button.collapsed, .accordion-body, .accordion-collapse {
+.accordion-button.collapsed,
+.accordion-body,
+.accordion-collapse {
     /*border-bottom-left-radius: var(--bs-border-radius) !important;
     border-bottom-right-radius: var(--bs-border-radius) !important;
     transition: color 0.15s ease-in-out,background-color 0.15s ease-in-out,border-color 0.15s ease-in-out,box-shadow 0.15s ease-in-out,border-radius 0.15s ease, height .35s ease, border-bottom-left-radius .35s ease, border-bottom-right-radius .35s ease !important;*/
@@ -562,7 +615,7 @@ body {
 }
 
 .accordion-body {
-    
+
     /*margin-left: -3px;
     margin-right: -3px;*/
 }
@@ -608,12 +661,14 @@ ul {
     padding-left: 18px !important;
 }
 
-div.my-2 ul, div.mt-2 ul {
+div.my-2 ul,
+div.mt-2 ul {
     margin-top: 4px !important;
     margin-bottom: 8px !important;
 }
 
-div.my-2 ul li, div.mt-2 ul li {
+div.my-2 ul li,
+div.mt-2 ul li {
     margin-bottom: 4px !important;
 }
 

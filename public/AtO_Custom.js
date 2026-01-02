@@ -7059,6 +7059,57 @@ $(document).ready(function () {
     myDefaultAllowList.image = ["width", "height", "x", "y", "xlink:href"];
     myDefaultAllowList.text = ["x", "y", "class", "text-anchor", "dominant-baseline"];
 
+    // Configure CSS sanitizer to allow font-family
+    // Bootstrap 5 sanitizes CSS properties - we need to allow font-family
+    if (bootstrap.Tooltip.Default && typeof bootstrap.Tooltip.Default.sanitizeFn === 'function') {
+        var originalTooltipSanitize = bootstrap.Tooltip.Default.sanitizeFn;
+        bootstrap.Tooltip.Default.sanitizeFn = function (input) {
+            var result = originalTooltipSanitize(input);
+            // Preserve font-family if it exists in the original input
+            if (input && typeof input === 'string' && input.includes('font-family')) {
+                var fontFamilyRegex = /font-family\s*:\s*["']?([^;"']+)["']?/gi;
+                var matches = input.match(fontFamilyRegex);
+                if (matches && (!result || !result.includes('font-family'))) {
+                    // Reconstruct with font-family preserved
+                    return result ? result.replace(/(style\s*=\s*["'])([^"']*)(["'])/i,
+                        function (m, p1, content, p2) {
+                            return p1 + content + (content && !content.endsWith(';') ? '; ' : ' ') + matches[0] + p2;
+                        }) : input;
+                }
+            }
+            return result;
+        };
+    }
+
+    // Also configure for Popover
+    if (bootstrap.Popover && bootstrap.Popover.Default && typeof bootstrap.Popover.Default.sanitizeFn === 'function') {
+        var originalPopoverSanitize = bootstrap.Popover.Default.sanitizeFn;
+        bootstrap.Popover.Default.sanitizeFn = function (input) {
+            var result = originalPopoverSanitize(input);
+            if (input && typeof input === 'string' && input.includes('font-family')) {
+                var fontFamilyRegex = /font-family\s*:\s*["']?([^;"']+)["']?/gi;
+                var matches = input.match(fontFamilyRegex);
+                if (matches && (!result || !result.includes('font-family'))) {
+                    return result ? result.replace(/(style\s*=\s*["'])([^"']*)(["'])/i,
+                        function (m, p1, content, p2) {
+                            return p1 + content + (content && !content.endsWith(';') ? '; ' : ' ') + matches[0] + p2;
+                        }) : input;
+                }
+            }
+            return result;
+        };
+    }
+
+    // Also configure Popover's allowList
+    if (bootstrap.Popover && bootstrap.Popover.Default) {
+        var popoverAllowList = bootstrap.Popover.Default.allowList;
+        Object.keys(myDefaultAllowList).forEach(function (key) {
+            if (popoverAllowList[key]) {
+                popoverAllowList[key] = myDefaultAllowList[key];
+            }
+        });
+    }
+
     Object.keys(vanillaCardList.No).forEach(function (cardID) {
         $("#select_new_card_vanilla").append(`<option value="` + cardID + `">` + vanillaCardList.No[cardID] + `</option>`);
     });
@@ -10302,7 +10353,7 @@ async function generateCardSVG(card) {
 };
 
 function inlineIconHTML(iconName) {
-    return `<img src="/AtO_images/icon_` + iconName + `.png" class="img-fluid" style="max-height: 3rem; position: relative; bottom: 7px;" alt="` + iconName + `"/>`;
+    return `<img src="/AtO_images/icon_` + iconName.toLowerCase() + `.png" class="img-fluid" style="max-height: 3rem; position: relative; bottom: 7px;" alt="` + iconName + `"/>`;
 };
 
 function generateCardObj() {

@@ -232,122 +232,122 @@ const defaultCard = {
     "Sku": ""
 };
 const defaultItem = {
-	"ACG1MultiplyByEnergyUsed": false,
-	"ACG2MultiplyByEnergyUsed": false,
-	"ACG3MultiplyByEnergyUsed": false,
-	"Activation": "Damaged",
-	"ActivationOnlyOnHeroes": false,
-	"AuraCurseBonus1": "",
-	"AuraCurseBonus2": "",
-	"AuraCurseBonusValue1": 0,
-	"AuraCurseBonusValue2": 0,
-	"AuraCurseCustomAC": "",
-	"AuraCurseCustomModValue1": 0,
-	"AuraCurseCustomModValue2": 0,
-	"AuraCurseCustomString": "",
-	"AuraCurseGain1": "",
-	"AuraCurseGain2": "",
-	"AuraCurseGain3": "",
-	"AuraCurseGainSelf1": "",
-	"AuraCurseGainSelf2": "",
-	"AuraCurseGainSelfValue1": 0,
-	"AuraCurseGainSelfValue2": 0,
-	"AuraCurseGainValue1": 0,
-	"AuraCurseGainValue2": 0,
-	"AuraCurseGainValue3": 0,
-	"AuraCurseImmune1": "",
-	"AuraCurseImmune2": "",
-	"AuraCurseNumForOneEvent": 0,
-	"AuraCurseSetted": "",
-	"CardNum": 0,
-	"CardPlace": "Hand",
-	"CardToGain": "",
-	"CardToGainList": [],
-	"CardToGainType": "None",
-	"CardToReduceType": "None",
-	"CardsReduced": 0,
-	"CastEnchantmentOnFinishSelfCast": false,
-	"CastedCardType": "None",
-	"ChanceToDispel": 0,
-	"ChanceToDispelNum": 0,
-	"CharacterStatModified": "None",
-	"CharacterStatModified2": "None",
-	"CharacterStatModified3": "None",
-	"CharacterStatModifiedValue": 0,
-	"CharacterStatModifiedValue2": 0,
+    "ACG1MultiplyByEnergyUsed": false,
+    "ACG2MultiplyByEnergyUsed": false,
+    "ACG3MultiplyByEnergyUsed": false,
+    "Activation": "Damaged",
+    "ActivationOnlyOnHeroes": false,
+    "AuraCurseBonus1": "",
+    "AuraCurseBonus2": "",
+    "AuraCurseBonusValue1": 0,
+    "AuraCurseBonusValue2": 0,
+    "AuraCurseCustomAC": "",
+    "AuraCurseCustomModValue1": 0,
+    "AuraCurseCustomModValue2": 0,
+    "AuraCurseCustomString": "",
+    "AuraCurseGain1": "",
+    "AuraCurseGain2": "",
+    "AuraCurseGain3": "",
+    "AuraCurseGainSelf1": "",
+    "AuraCurseGainSelf2": "",
+    "AuraCurseGainSelfValue1": 0,
+    "AuraCurseGainSelfValue2": 0,
+    "AuraCurseGainValue1": 0,
+    "AuraCurseGainValue2": 0,
+    "AuraCurseGainValue3": 0,
+    "AuraCurseImmune1": "",
+    "AuraCurseImmune2": "",
+    "AuraCurseNumForOneEvent": 0,
+    "AuraCurseSetted": "",
+    "CardNum": 0,
+    "CardPlace": "Hand",
+    "CardToGain": "",
+    "CardToGainList": [],
+    "CardToGainType": "None",
+    "CardToReduceType": "None",
+    "CardsReduced": 0,
+    "CastEnchantmentOnFinishSelfCast": false,
+    "CastedCardType": "None",
+    "ChanceToDispel": 0,
+    "ChanceToDispelNum": 0,
+    "CharacterStatModified": "None",
+    "CharacterStatModified2": "None",
+    "CharacterStatModified3": "None",
+    "CharacterStatModifiedValue": 0,
+    "CharacterStatModifiedValue2": 0,
     "CharacterStatModifiedValue3": 0,
     "CostReduceEnergyRequirement": 0,
-	"CostReducePermanent": false,
-	"CostReduceReduction": 0,
-	"CostReduction": 0,
-	"CostZero": false,
-	"CursedItem": false,
-	"DTTMultiplyByEnergyUsed": false,
-	"DamageFlatBonus": "None",
-	"DamageFlatBonus2": "None",
-	"DamageFlatBonus3": "None",
-	"DamageFlatBonusValue": 0,
-	"DamageFlatBonusValue2": 0,
-	"DamageFlatBonusValue3": 0,
-	"DamagePercentBonus": "None",
-	"DamagePercentBonus2": "None",
-	"DamagePercentBonus3": "None",
-	"DamagePercentBonusValue": 0,
-	"DamagePercentBonusValue2": 0,
-	"DamagePercentBonusValue3": 0,
-	"DamageToTarget": 0,
-	"DamageToTargetType": "None",
-	"DestroyAfterUse": false,
-	"DestroyAfterUses": 0,
-	"DestroyEndOfTurn": false,
-	"DestroyStartOfTurn": false,
-	"DrawCards": 0,
-	"DrawMultiplyByEnergyUsed": false,
-	"DropOnly": false,
-	"DuplicateActive": false,
+    "CostReducePermanent": false,
+    "CostReduceReduction": 0,
+    "CostReduction": 0,
+    "CostZero": false,
+    "CursedItem": false,
+    "DTTMultiplyByEnergyUsed": false,
+    "DamageFlatBonus": "None",
+    "DamageFlatBonus2": "None",
+    "DamageFlatBonus3": "None",
+    "DamageFlatBonusValue": 0,
+    "DamageFlatBonusValue2": 0,
+    "DamageFlatBonusValue3": 0,
+    "DamagePercentBonus": "None",
+    "DamagePercentBonus2": "None",
+    "DamagePercentBonus3": "None",
+    "DamagePercentBonusValue": 0,
+    "DamagePercentBonusValue2": 0,
+    "DamagePercentBonusValue3": 0,
+    "DamageToTarget": 0,
+    "DamageToTargetType": "None",
+    "DestroyAfterUse": false,
+    "DestroyAfterUses": 0,
+    "DestroyEndOfTurn": false,
+    "DestroyStartOfTurn": false,
+    "DrawCards": 0,
+    "DrawMultiplyByEnergyUsed": false,
+    "DropOnly": false,
+    "DuplicateActive": false,
     "EffectCaster": "",
     "EffectCasterDelay": 0,
     "EffectItemOwner": "",
     "EffectTarget": "",
     "EffectTargetDelay": 0,
-	"EmptyHand": false,
-	"EnergyQuantity": 0,
-	"ExactRound": 0,
-	"HealFlatBonus": 0,
+    "EmptyHand": false,
+    "EnergyQuantity": 0,
+    "ExactRound": 0,
+    "HealFlatBonus": 0,
     "HealPercentBonus": 0,
     "HealPercentQuantity": 0,
     "HealPercentQuantitySelf": 0,
-	"HealQuantity": 0,
-	"HealReceivedFlatBonus": 0,
-	"HealReceivedPercentBonus": 0,
-	"ID": "",
-	"IsEnchantment": false,
-	"ItemSound": "",
-	"ItemTarget": "CurrentTarget",
-	"LowerOrEqualPercentHP": 100,
-	"MaxHealth": 0,
-	"ModifiedDamageType": "None",
-	"NotShowCharacterBonus": false,
-	"OnlyAddItemToNPCs": false,
-	"PassSingleAndCharacterRolls": false,
-	"PercentDiscountShop": 0,
-	"PercentRetentionEndGame": 0,
-	"Permanent": false,
-	"QuestItem": false,
-	"ReduceHighestCost": false,
-	"ResistModified1": "None",
-	"ResistModified2": "None",
-	"ResistModified3": "None",
-	"ResistModifiedValue1": 0,
-	"ResistModifiedValue2": 0,
-	"ResistModifiedValue3": 0,
-	"RoundCycle": 0,
-	"SpriteBossDrop": "",
-	"TimesPerCombat": 0,
-	"TimesPerTurn": 0,
-	"UseTheNextInsteadWhenYouPlay": false,
-	"UsedEnergy": false,
-	"Vanish": false
+    "HealQuantity": 0,
+    "HealReceivedFlatBonus": 0,
+    "HealReceivedPercentBonus": 0,
+    "ID": "",
+    "IsEnchantment": false,
+    "ItemSound": "",
+    "ItemTarget": "CurrentTarget",
+    "LowerOrEqualPercentHP": 100,
+    "MaxHealth": 0,
+    "ModifiedDamageType": "None",
+    "NotShowCharacterBonus": false,
+    "OnlyAddItemToNPCs": false,
+    "PassSingleAndCharacterRolls": false,
+    "PercentDiscountShop": 0,
+    "PercentRetentionEndGame": 0,
+    "Permanent": false,
+    "QuestItem": false,
+    "ReduceHighestCost": false,
+    "ResistModified1": "None",
+    "ResistModified2": "None",
+    "ResistModified3": "None",
+    "ResistModifiedValue1": 0,
+    "ResistModifiedValue2": 0,
+    "ResistModifiedValue3": 0,
+    "RoundCycle": 0,
+    "SpriteBossDrop": "",
+    "TimesPerCombat": 0,
+    "TimesPerTurn": 0,
+    "UseTheNextInsteadWhenYouPlay": false,
+    "UsedEnergy": false,
+    "Vanish": false
 };
 
 // I think if I do my enums like this I can do language selection later? .: key is actual JSON-read value, value is lang-based?
@@ -7233,7 +7233,7 @@ $(document).ready(function () {
                 newHTML += `<option value="` + card.UpgradedFrom + `">` + neverBlankName(card.CardName) + `</option>`;
                 doneIDs.push(card.UpgradedFrom);
             } else if (!(doneIDs.includes(card.UpgradedFrom))) {
-                newHTML += `<option value="` + card.ID + `">` + neverBlankName(card.CardName)+ `</option>`;
+                newHTML += `<option value="` + card.ID + `">` + neverBlankName(card.CardName) + `</option>`;
                 doneIDs.push(card.ID);
             };
         });
@@ -7651,7 +7651,7 @@ $(document).ready(function () {
         };
         localStorage.setItem("medsLocks", JSON.stringify(medsLocks));
     });
-    
+
     $("#check_show_advanced").on('change', function () {
         if ($("#check_show_advanced").is(':checked')) {
             localStorage.setItem("settings_advanced", "true");
@@ -7691,8 +7691,8 @@ function cardObject2Fields(card) {
     cardTypes = [];
     if (card.CardClass === "Item") {
         $("#select_card_class").val(card.CardType);
-    /*} else if (card.CardClass === "Special" && card.CardType === "Enchantment") {
-        $("#select_card_class").val("Enchantment");*/
+        /*} else if (card.CardClass === "Special" && card.CardType === "Enchantment") {
+            $("#select_card_class").val("Enchantment");*/
     } else {
         $("#select_card_class").val(card.CardClass);
     };
@@ -8796,7 +8796,7 @@ async function generateCardSVG(card) {
     if (card == null) { return ""; }
     var cardHTML = `<svg viewBox="0 0 681 1024" style="overflow: hidden;">
                         <g>
-                            <image width="681" height="1024" x="0" y="0" xlink:href="AtO_images\\card_base_background_`;
+                            <image width="681" height="1024" x="0" y="0" xlink:href="/AtO_images/card_base_background_`;
     // console.log("CARD: " + card.CardName);
     // console.log(card);
     // console.log("DEFAULTITEM");
@@ -8854,34 +8854,34 @@ async function generateCardSVG(card) {
     if (customSpriteObjURLs.hasOwnProperty(card.Sprite.toLowerCase())) {
         cardHTML += `<image width="472" height="472" x="105" y="47" xlink:href="` + customSpriteObjURLs[card.Sprite.toLowerCase()] + `"></image>`;
     };
-    cardHTML += `<image width="681" height="1024" x="0" y="0" xlink:href="AtO_images\\card_base_border_` + card.CardRarity.toLowerCase() + `.png"></image>`;
+    cardHTML += `<image width="681" height="1024" x="0" y="0" xlink:href="/AtO_images/card_base_border_` + card.CardRarity.toLowerCase() + `.png"></image>`;
     if (bItem && !bEnch) {
         // item type for top left of itemcards
         if (card.CardType === "Weapon") {
-            cardHTML += `<image width="681" height="1024" x="0" y="0" xlink:href="AtO_images\\card_base_item_weapon.png"></image>`;
+            cardHTML += `<image width="681" height="1024" x="0" y="0" xlink:href="/AtO_images/card_base_item_weapon.png"></image>`;
         } else if (card.CardType === "Armor") {
-            cardHTML += `<image width="681" height="1024" x="0" y="0" xlink:href="AtO_images\\card_base_item_armor.png"></image>`;
+            cardHTML += `<image width="681" height="1024" x="0" y="0" xlink:href="/AtO_images/card_base_item_armor.png"></image>`;
         } else if (card.CardType === "Jewelry") {
-            cardHTML += `<image width="681" height="1024" x="0" y="0" xlink:href="AtO_images\\card_base_item_jewelry.png"></image>`;
+            cardHTML += `<image width="681" height="1024" x="0" y="0" xlink:href="/AtO_images/card_base_item_jewelry.png"></image>`;
         } else if (card.CardType === "Accesory") {
-            cardHTML += `<image width="681" height="1024" x="0" y="0" xlink:href="AtO_images\\card_base_item_accessory.png"></image>`;
+            cardHTML += `<image width="681" height="1024" x="0" y="0" xlink:href="/AtO_images/card_base_item_accessory.png"></image>`;
         };
     } else if (card.CardClass != "Monster") {
-        cardHTML += `<image width="681" height="1024" x="0" y="0" xlink:href="AtO_images\\card_base_energy_` + card.CardRarity.toLowerCase() + `.png"></image>`;
+        cardHTML += `<image width="681" height="1024" x="0" y="0" xlink:href="/AtO_images/card_base_energy_` + card.CardRarity.toLowerCase() + `.png"></image>`;
     };
-    cardHTML += `<image width="681" height="1024" x="0" y="0" xlink:href="AtO_images\\card_base_description.png"></image>
-                            <image width="681" height="1024" x="0" y="0" xlink:href="AtO_images\\card_base_name.png"></image>` + (bItem && !bEnch ? "" : `
-                            <image width="681" height="1024" x="0" y="0" xlink:href="AtO_images\\card_base_target.png"></image>
-                            <image width="681" height="1024" x="0" y="0" xlink:href="AtO_images\\card_base_type.png"></image>`) + `
-                            ` + (card.Innate ? `<image width="681" height="1024" x="0" y="0" xlink:href="AtO_images\\card_base_innate.png"></image>` : "") + `
-                            ` + (card.Vanish ? `<image width="681" height="1024" x="0" y="0" xlink:href="AtO_images\\card_base_vanish.png"></image>` : "") + `
+    cardHTML += `<image width="681" height="1024" x="0" y="0" xlink:href="/AtO_images/card_base_description.png"></image>
+                            <image width="681" height="1024" x="0" y="0" xlink:href="/AtO_images/card_base_name.png"></image>` + (bItem && !bEnch ? "" : `
+                            <image width="681" height="1024" x="0" y="0" xlink:href="/AtO_images/card_base_target.png"></image>
+                            <image width="681" height="1024" x="0" y="0" xlink:href="/AtO_images/card_base_type.png"></image>`) + `
+                            ` + (card.Innate ? `<image width="681" height="1024" x="0" y="0" xlink:href="/AtO_images/card_base_innate.png"></image>` : "") + `
+                            ` + (card.Vanish ? `<image width="681" height="1024" x="0" y="0" xlink:href="/AtO_images/card_base_vanish.png"></image>` : "") + `
                             <foreignObject width="575" height="100" x="50" y="465">
                                 <div class="d-flex h-100 w-100">
                                     <div class="boxfit_card_name meds-text-upgrade-` + card.CardUpgraded.toLowerCase() + ` m-auto text-nowrap">` + neverBlankName(card.CardName) + `
                                     </div>
                                 </div>
                             </foreignObject>`;
-    
+
     if (!bItem || bEnch) {
         cardHTML += `<text x="50%" y="614" class="svg-text-target" text-anchor="middle" dominant-baseline="middle">`;
         // target: see AtO CardData.SetTarget() for details, though the implementation is slightly different
@@ -8916,7 +8916,7 @@ async function generateCardSVG(card) {
     cardHTML += `<foreignObject width="` + (bItem && !bEnch ? "530" : "530") + `" height="` + (bItem && !bEnch ? "380" : "300") + `" x="` + (bItem && !bEnch ? "75" : "75") + `" y="` + (bItem && !bEnch ? "585" : "630") + `">
                                     <div class="d-flex h-100 w-100">
                                     <div class="boxfit_` + (bItem && !bEnch ? "item" : "card") + `_description w-100 my-auto text-center svg-text-description">`;
-    
+
     var desc = "";
     if (bItem) {
         if (cardItem.MaxHealth != 0) {
@@ -8953,21 +8953,21 @@ async function generateCardSVG(card) {
             if (cardItem.CharacterStatModified === "Speed") {
                 desc += `<p>Speed&nbsp;<span style="color: var(--meds-color-` + (cardItem.CharacterStatModifiedValue > 0 ? `aura);">+` : `curse);">-`) + Math.abs(cardItem.CharacterStatModifiedValue) + `</span></p>`;
             } else if (cardItem.CharacterStatModified === "EnergyTurn") {
-                desc += `<p>` + inlineIconHTML("energy") +`&nbsp;regeneration&nbsp;<span style="color: var(--meds-color-` + (cardItem.CharacterStatModifiedValue > 0 ? `aura);">+` : `curse);">-`) + Math.abs(cardItem.CharacterStatModifiedValue) + `</span></p>`;
+                desc += `<p>` + inlineIconHTML("energy") + `&nbsp;regeneration&nbsp;<span style="color: var(--meds-color-` + (cardItem.CharacterStatModifiedValue > 0 ? `aura);">+` : `curse);">-`) + Math.abs(cardItem.CharacterStatModifiedValue) + `</span></p>`;
             };
         };
         if (cardItem.CharacterStatModifiedValue2 !== 0) {
             if (cardItem.CharacterStatModified2 === "Speed") {
                 desc += `<p>Speed&nbsp;<span style="color: var(--meds-color-` + (cardItem.CharacterStatModifiedValue2 > 0 ? `aura);">+` : `curse);">-`) + Math.abs(cardItem.CharacterStatModifiedValue2) + `</span></p>`;
             } else if (cardItem.CharacterStatModified2 === "EnergyTurn") {
-                desc += `<p>` + inlineIconHTML("energy") +`&nbsp;regeneration&nbsp;<span style="color: var(--meds-color-` + (cardItem.CharacterStatModifiedValue2 > 0 ? `aura);">+` : `curse);">-`) + Math.abs(cardItem.CharacterStatModifiedValue2) + `</span></p>`;
+                desc += `<p>` + inlineIconHTML("energy") + `&nbsp;regeneration&nbsp;<span style="color: var(--meds-color-` + (cardItem.CharacterStatModifiedValue2 > 0 ? `aura);">+` : `curse);">-`) + Math.abs(cardItem.CharacterStatModifiedValue2) + `</span></p>`;
             };
         };
         if (cardItem.CharacterStatModifiedValue3 !== 0) {
             if (cardItem.CharacterStatModified3 === "Speed") {
                 desc += `<p>Speed&nbsp;<span style="color: var(--meds-color-` + (cardItem.CharacterStatModifiedValue3 > 0 ? `aura);">+` : `curse);">-`) + Math.abs(cardItem.CharacterStatModifiedValue3) + `</span></p>`;
             } else if (cardItem.CharacterStatModified3 === "EnergyTurn") {
-                desc += `<p>` + inlineIconHTML("energy") +`&nbsp;regeneration&nbsp;<span style="color: var(--meds-color-` + (cardItem.CharacterStatModifiedValue3 > 0 ? `aura);">+` : `curse);">-`) + Math.abs(cardItem.CharacterStatModifiedValue3) + `</span></p>`;
+                desc += `<p>` + inlineIconHTML("energy") + `&nbsp;regeneration&nbsp;<span style="color: var(--meds-color-` + (cardItem.CharacterStatModifiedValue3 > 0 ? `aura);">+` : `curse);">-`) + Math.abs(cardItem.CharacterStatModifiedValue3) + `</span></p>`;
             };
         };
 
@@ -9039,7 +9039,7 @@ async function generateCardSVG(card) {
         if (cardItem.HealFlatBonus != 0) {
             desc += `<p>` + inlineIconHTML("heal") + `&nbsp;heal done&nbsp;<span style="color: var(--meds-color-` + (cardItem.HealFlatBonus > 0 ? `aura);">+` : `curse);">-`) + Math.abs(cardItem.HealFlatBonus) + `</span></p>`;
         };
-         // percent heal
+        // percent heal
         if (cardItem.HealPercentBonus != 0) {
             desc += `<p>` + inlineIconHTML("heal") + `&nbsp;heal done&nbsp;<span style="color: var(--meds-color-` + (cardItem.HealPercentBonus > 0 ? `aura);">+` : `curse);">-`) + Math.abs(cardItem.HealPercentBonus) + `%</span></p>`;
         };
@@ -10302,7 +10302,7 @@ async function generateCardSVG(card) {
 };
 
 function inlineIconHTML(iconName) {
-    return `<img src="AtO_images\\icon_` + iconName + `.png" class="img-fluid" style="max-height: 3rem; position: relative; bottom: 7px;" alt="` + iconName + `"/>`;
+    return `<img src="/AtO_images/icon_` + iconName + `.png" class="img-fluid" style="max-height: 3rem; position: relative; bottom: 7px;" alt="` + iconName + `"/>`;
 };
 
 function generateCardObj() {
@@ -10730,7 +10730,7 @@ function generateCardObj() {
     newItem.CardToGain = "";
     newItem.CardToGainList = [];
     newItem.CardToGainType = $("#select_cardtogaintype").val();
-    
+
     if ($("#select_cardtogainwhat").val() === "duplicate") {
         newItem.CardPlace = "Hand";
         newItem.DuplicateActive = true;
@@ -10783,7 +10783,7 @@ function generateCardObj() {
     newItem.CostReduceEnergyRequirement = parseIntNoNaN($("#amount_costreduceenergyrequirement").val());
     newItem.ReduceHighestCost = $("#check_reducehighestcost").is(':checked');
     newItem.CostReducePermanent = $("#check_costreducepermanent").is(':checked');
-    
+
     newItem.EnergyQuantity = parseIntNoNaN($("#amount_energyquantity").val());
     newItem.SpriteBossDrop = ""; // #TODO maybe custom Obeliskial image later?
     newItem.AuraCurseNumForOneEvent = 0;
@@ -10972,9 +10972,9 @@ function generateCardObj() {
             break;
         case "BeginCombat":
             if ((newItem.AuraCurseGain1 !== "" && newItem.AuraCurseGainValue1 !== 0) || (newItem.AuraCurseGain2 !== "" && newItem.AuraCurseGainValue2 !== 0) || (newItem.AuraCurseGain3 !== "" && newItem.AuraCurseGainValue3 !== 0) || (newItem.AuraCurseGainSelf1 !== "" && newItem.AuraCurseGainSelfValue1 !== 0) || (newItem.AuraCurseGainSelf2 !== "" && newItem.AuraCurseGainSelfValue2 !== 0) || (newItem.CardNum > 0) || (newItem.CostReduceReduction !== 0 && newItem.CardsReduced !== 0) || (newItem.EnergyQuantity !== 0) || (newItem.DrawCards !== 0) || (newItem.ChanceToDispel > 0 && newItem.ChanceToDispelNum !== 0) || (newItem.DamageToTarget > 0 && newItem.DamageToTargetType !== "None") || (newItem.HealQuantity !== 0) || (newItem.HealPercentQuantity !== 0)) {
-                newItem.Activation = sActivation; 
+                newItem.Activation = sActivation;
             } else {
-                newItem.Activation = "PreBeginCombat"; 
+                newItem.Activation = "PreBeginCombat";
             };
             break;
         case "Hitted":
@@ -11025,7 +11025,7 @@ function generateCardObj() {
             newCard.Playable = false; // items never playable!
             newCard.Item = JSON.stringify(newItem);
         };
-        
+
     };
 
     // console.log("ID4: " + newCard.ID);
@@ -11253,15 +11253,15 @@ async function getNewCardObjects() {
                 var newCardHTML = `<div>` + newCardSVG + `</div><div class="d-flex mt-1 mx-auto">`;
                 var more = Object.keys(uploadingCards).length - 1;
                 if (newCardObj.UpgradesTo1.length > 0 && (customCards.hasOwnProperty(newCardObj.UpgradesTo1) || vanillaCards.hasOwnProperty(newCardObj.UpgradesTo1) || uploadingCards.hasOwnProperty(newCardObj.UpgradesTo1))) {
-                    newCardHTML += `<img id="svg_card_new_upgrade_a" src="AtO_images\\icon_upgrade_a.png" class="mx-auto w-30p" hover-card-id="` + newCardObj.UpgradesTo1 + `" tabindex="0" role="button" aria-pressed="true" alt="upgrade A"/>`;
+                    newCardHTML += `<img id="svg_card_new_upgrade_a" src="/AtO_images/icon_upgrade_a.png" class="mx-auto w-30p" hover-card-id="` + newCardObj.UpgradesTo1 + `" tabindex="0" role="button" aria-pressed="true" alt="upgrade A"/>`;
                     more = more - 1;
                 };
                 if (newCardObj.UpgradesTo2.length > 0 && (customCards.hasOwnProperty(newCardObj.UpgradesTo2) || vanillaCards.hasOwnProperty(newCardObj.UpgradesTo2) || uploadingCards.hasOwnProperty(newCardObj.UpgradesTo2))) {
-                    newCardHTML += `<img id="svg_card_new_upgrade_b" src="AtO_images\\icon_upgrade_b.png" class="mx-auto w-30p" hover-card-id="` + newCardObj.UpgradesTo2 + `" tabindex="0" role="button" aria-pressed="true" alt="upgrade B"/>`;
+                    newCardHTML += `<img id="svg_card_new_upgrade_b" src="/AtO_images/icon_upgrade_b.png" class="mx-auto w-30p" hover-card-id="` + newCardObj.UpgradesTo2 + `" tabindex="0" role="button" aria-pressed="true" alt="upgrade B"/>`;
                     more = more - 1;
                 };
                 if (newCardObj.UpgradesToRare.length > 0 && (customCards.hasOwnProperty(newCardObj.UpgradesToRare) || vanillaCards.hasOwnProperty(newCardObj.UpgradesToRare) || uploadingCards.hasOwnProperty(newCardObj.UpgradesToRare))) {
-                    newCardHTML += `<img id="svg_card_new_upgrade_rare" src="AtO_images\\icon_upgrade_rare.png" class="mx-auto w-30p" hover-card-id="` + newCardObj.UpgradesToRare + `" tabindex="0" role="button" aria-pressed="true" alt="upgrade Rare"/>`;
+                    newCardHTML += `<img id="svg_card_new_upgrade_rare" src="/AtO_images/icon_upgrade_rare.png" class="mx-auto w-30p" hover-card-id="` + newCardObj.UpgradesToRare + `" tabindex="0" role="button" aria-pressed="true" alt="upgrade Rare"/>`;
                     more = more - 1;
                 };
                 newCardHTML += `</div>`;
@@ -11324,15 +11324,15 @@ async function getNewCardObjects() {
                 var newCardHTML = `<div>` + newCardSVG + `</div><div class="d-flex mt-1 mx-auto">`;
                 var more = Object.keys(uploadingCards).length - 1;
                 if (newCardObj.UpgradesTo1.length > 0 && (customCards.hasOwnProperty(newCardObj.UpgradesTo1) || vanillaCards.hasOwnProperty(newCardObj.UpgradesTo1) || uploadingCards.hasOwnProperty(newCardObj.UpgradesTo1))) {
-                    newCardHTML += `<img id="svg_card_new_upgrade_a" src="AtO_images\\icon_upgrade_a.png" class="mx-auto w-30p" hover-card-id="` + newCardObj.UpgradesTo1 + `" tabindex="0" role="button" aria-pressed="true" alt="upgrade A"/>`;
+                    newCardHTML += `<img id="svg_card_new_upgrade_a" src="/AtO_images/icon_upgrade_a.png" class="mx-auto w-30p" hover-card-id="` + newCardObj.UpgradesTo1 + `" tabindex="0" role="button" aria-pressed="true" alt="upgrade A"/>`;
                     more = more - 1;
                 };
                 if (newCardObj.UpgradesTo2.length > 0 && (customCards.hasOwnProperty(newCardObj.UpgradesTo2) || vanillaCards.hasOwnProperty(newCardObj.UpgradesTo2) || uploadingCards.hasOwnProperty(newCardObj.UpgradesTo2))) {
-                    newCardHTML += `<img id="svg_card_new_upgrade_b" src="AtO_images\\icon_upgrade_b.png" class="mx-auto w-30p" hover-card-id="` + newCardObj.UpgradesTo2 + `" tabindex="0" role="button" aria-pressed="true" alt="upgrade B"/>`;
+                    newCardHTML += `<img id="svg_card_new_upgrade_b" src="/AtO_images/icon_upgrade_b.png" class="mx-auto w-30p" hover-card-id="` + newCardObj.UpgradesTo2 + `" tabindex="0" role="button" aria-pressed="true" alt="upgrade B"/>`;
                     more = more - 1;
                 };
                 if (newCardObj.UpgradesToRare.length > 0 && (customCards.hasOwnProperty(newCardObj.UpgradesToRare) || vanillaCards.hasOwnProperty(newCardObj.UpgradesToRare) || uploadingCards.hasOwnProperty(newCardObj.UpgradesToRare))) {
-                    newCardHTML += `<img id="svg_card_new_upgrade_rare" src="AtO_images\\icon_upgrade_rare.png" class="mx-auto w-30p" hover-card-id="` + newCardObj.UpgradesToRare + `" tabindex="0" role="button" aria-pressed="true" alt="upgrade Rare"/>`;
+                    newCardHTML += `<img id="svg_card_new_upgrade_rare" src="/AtO_images/icon_upgrade_rare.png" class="mx-auto w-30p" hover-card-id="` + newCardObj.UpgradesToRare + `" tabindex="0" role="button" aria-pressed="true" alt="upgrade Rare"/>`;
                     more = more - 1;
                 };
                 newCardHTML += `</div>`;
@@ -11460,7 +11460,7 @@ async function setupHoverCards(where, clickAction) {
                     } else {
                         return `card not found!`
                     };
-                    
+
                 },
                 title: "",
                 sanitize: false,
@@ -11603,7 +11603,7 @@ async function startUp() {
         console.log("database ERROR: " + e);
     });
 
-    
+
 
     if (localStorage.getItem("medsLocks") !== null) { medsLocks = JSON.parse(localStorage.getItem("medsLocks")); };
     if (localStorage.getItem("settings_advanced") == "true") { $("#check_show_advanced").prop("checked", true) };

@@ -108,3 +108,4 @@ bin/
 node_modules/
 obj/
 thumbs.db
+.vercel

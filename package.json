@@ -4,11 +4,16 @@
   "type": "module",
   "description": "meds!code",
   "main": "code.js",
+  "scripts": {
+    "build": "echo 'No build step required for static site'",
+    "start": "node code.js"
+  },
   "author": {
     "name": ""
   },
   "devDependencies": {
-    "eslint": "^8.21.0"
+    "eslint": "^8.21.0",
+    "vercel": "^34.0.0"
   },
   "eslintConfig": {},
   "dependencies": {

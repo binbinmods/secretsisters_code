@@ -31,11 +31,11 @@ body {
 
 @font-face {
     font-family: AlbertTextBold;
-    src: url(alberttextbold.otf);
+    src: url(/AlbertTextBold.otf);
 }
 @font-face {
     font-family: CantoraOne;
-    src: url(cantoraone-regular.ttf)
+    src: url(/CantoraOne-Regular.ttf);
 }
 
 .ato-title {
